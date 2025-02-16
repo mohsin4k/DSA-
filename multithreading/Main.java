@@ -9,7 +9,7 @@ public class Main {
 		
 		int buffer = 2; 
 		System.out.println("Program started!!");
-		
+	
 		SharedResource sr = new SharedResource(q, buffer);
 		
 		Thread producerThread = new Thread(() -> {
@@ -34,9 +34,11 @@ public class Main {
 			}
 		});
 		
+		
 		producerThread.start();
 		consumerThread.start();
 		
 	}
+	
 
 }
